@@ -4,5 +4,6 @@ module "s3" {
   applications = var.applications
   environment  = var.environment
   team         = var.team
+  region       = var.region
 
 }
