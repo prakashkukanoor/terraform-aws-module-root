@@ -3,7 +3,7 @@ variable "applications" {
     buckets                   = list(string)
     dynamodb_tables           = list(string)
     dynamo_db_policy_json_tpl_path = string
-    policy_json_tpl_file_path = string
+    s3_policy_json_tpl_path = string
   }))
 }
 
