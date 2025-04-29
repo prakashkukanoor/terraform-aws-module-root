@@ -1,5 +1,5 @@
 module "s3" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-s3-module.git"
+  source = "git@github.com:prakashkukanoor/terraform-aws-s3-module.git?ref=v1.0.1"
 
   applications = var.applications
   environment  = var.environment
@@ -9,7 +9,7 @@ module "s3" {
 }
 
 module "dynamodb" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-dynamodb-module.git"
+  source = "git@github.com:prakashkukanoor/terraform-aws-dynamodb-module.git?ref=v1.0.0"
 
   applications = var.applications
   environment  = var.environment
