@@ -1,7 +1,6 @@
 module "networking" {
   source = "git@github.com:prakashkukanoor/terraform-aws-vpc-subnets-routetable.git?ref=v1.0.5"
 
-  applications                = var.applications
   environment                 = var.environment
   team                        = var.team
   region                      = var.region
