@@ -9,7 +9,7 @@ module "s3" {
 }
 
 module "dynamodb" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-dynamodb-module.git?ref=v1.0.0"
+  source = "git@github.com:prakashkukanoor/terraform-aws-dynamodb-module.git?ref=v1.0.1"
 
   applications = var.applications
   environment  = var.environment
