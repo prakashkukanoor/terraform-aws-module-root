@@ -76,6 +76,3 @@ variable "filter_name" {
 variable "number_of_ec2" {
   type = number
 }
-variable "vpc_id" {
-  type = string
-}
