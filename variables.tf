@@ -66,3 +66,13 @@ variable "vpc_interface_endpoints" {
     events = true
   }
 }
+
+variable "instance_type" {
+  type = string
+}
+variable "subnet_id" {
+  type = string
+}
+variable "filter_name" {
+  type = string
+}

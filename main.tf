@@ -22,7 +22,7 @@ module "s3" {
   team         = var.team
   region       = var.region
 
-   depends_on = [module.networking]
+  depends_on = [module.networking]
 
 }
 
@@ -33,6 +33,19 @@ module "dynamodb" {
   environment  = var.environment
   team         = var.team
   region       = var.region
+
+  depends_on = [module.networking]
+
+}
+
+module "ec2" {
+  source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
+
+  environment   = var.environment
+  team          = var.team
+  instance_type = var.instance_type
+  subnet_id     = var.subnet_id
+  filter_name   = var.filter_name
 
   depends_on = [module.networking]
 
