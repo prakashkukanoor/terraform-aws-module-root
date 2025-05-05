@@ -70,9 +70,6 @@ variable "vpc_interface_endpoints" {
 variable "instance_type" {
   type = string
 }
-variable "subnet_id" {
-  type = string
-}
 variable "filter_name" {
   type = string
 }
