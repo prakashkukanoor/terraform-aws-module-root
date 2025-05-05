@@ -73,3 +73,6 @@ variable "instance_type" {
 variable "filter_name" {
   type = string
 }
+variable "number_of_ec2" {
+  type = number
+}
