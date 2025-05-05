@@ -44,6 +44,7 @@ module "ec2" {
   environment   = var.environment
   team          = var.team
   number_of_ec2 = var.number_of_ec2
+  subnet_id = module.networking.application_private_subnet_ids
   instance_type = var.instance_type
   filter_name   = var.filter_name
 
