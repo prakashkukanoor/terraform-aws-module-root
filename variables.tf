@@ -32,11 +32,18 @@ variable "availability_zone" {
 }
 
 variable "application_public_subnets" {
-  type = list(object({
+  type = map(object({
     ipv4_cidr  = string
     ipv6_index = number
   }))
+  
 }
+# variable "application_public_subnets" {
+#   type = list(object({
+#     ipv4_cidr  = string
+#     ipv6_index = number
+#   }))
+# }
 
 variable "application_private_subnets" {
   type = list(object({
