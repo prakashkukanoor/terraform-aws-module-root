@@ -1,5 +1,5 @@
 module "networking" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-vpc-subnets-routetable.git?ref=v1.0.5"
+  source = "git@github.com:prakashkukanoor/terraform-aws-vpc-subnets-routetable.git"
 
   environment                 = var.environment
   team                        = var.team
