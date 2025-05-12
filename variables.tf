@@ -33,6 +33,7 @@ variable "availability_zone" {
 
 variable "application_public_subnets" {
   type = map(object({
+    az = string
     ipv4_cidr  = string
     ipv6_index = number
   }))
