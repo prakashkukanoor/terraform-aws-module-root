@@ -1,5 +1,5 @@
 output "application_public_subnet_ids" {
-  value = module.networking.application_public_subnet_ids
+  value = aws_subnet.application_public[*].id
 }
 
 output "application_private_subnet_ids" {
