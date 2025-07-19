@@ -1,5 +1,5 @@
 module "networking" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-vpc-subnets-routetable.git"
+  source = "git@github.com:prakashkukanoor/terraform-aws-vpc-subnets-routetable.git?ref=v1.0.5"
 
   environment                 = var.environment
   team                        = var.team
@@ -38,17 +38,17 @@ module "dynamodb" {
 
 }
 
-module "ec2" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
+# module "ec2" {
+#   source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
 
-  environment   = var.environment
-  team          = var.team
-  number_of_ec2 = var.number_of_ec2
-  subnet_id     = module.networking.application_private_subnet_ids
-  vpc_id        = module.networking.vpc_id
-  instance_type = var.instance_type
-  filter_name   = var.filter_name
+#   environment   = var.environment
+#   team          = var.team
+#   number_of_ec2 = var.number_of_ec2
+#   subnet_id     = module.networking.application_private_subnet_ids
+#   vpc_id        = module.networking.vpc_id
+#   instance_type = var.instance_type
+#   filter_name   = var.filter_name
 
-  depends_on = [module.networking]
+#   depends_on = [module.networking]
 
-}
+# }
