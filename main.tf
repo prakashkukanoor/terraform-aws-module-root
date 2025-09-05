@@ -38,17 +38,17 @@ module "dynamodb" {
 
 }
 
-module "eks" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git?ref=feature/eks1.31"
+# module "eks" {
+#   source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git?ref=feature/eks1.31"
 
-  environment  = var.environment
-  team         = var.team
-  cluster_name       = var.cluster_name
-  private_subnets = module.networking.application_private_subnet_ids
+#   environment  = var.environment
+#   team         = var.team
+#   cluster_name       = var.cluster_name
+#   private_subnets = module.networking.application_private_subnet_ids
 
-  depends_on = [module.networking]
+#   depends_on = [module.networking]
 
-}
+# }
 
 # module "ec2" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
