@@ -67,6 +67,10 @@ variable "vpc_interface_endpoints" {
   }
 }
 
+variable "cluster_name" {
+  type = string
+}
+
 # variable "instance_type" {
 #   type = string
 # }
