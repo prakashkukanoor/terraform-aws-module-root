@@ -39,7 +39,7 @@ module "dynamodb" {
 }
 
 module "eks" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git?ref=feature/eks1.31"
+  source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git?ref=v1.0.0"
 
   environment     = var.environment
   team            = var.team
