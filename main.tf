@@ -32,13 +32,16 @@ module "eks" {
 
 }
 
-# module "rds" {
-#   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git"
+module "rds" {
+  source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git"
 
-#   db_subnet_group_ids = var.db_subnet_group_ids
+  environment = var.environment
+  team = var.team
+  applications = var.applications
+  db_subnet_ids = var.db_subnet_ids
   
 
-# }
+}
 
 # module "ec2" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
