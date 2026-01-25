@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.region
+}
+
 module "s3" {
   source = "git@github.com:prakashkukanoor/terraform-aws-s3-module.git?ref=v1.0.1"
 
@@ -27,6 +31,14 @@ module "eks" {
   private_subnets = var.application_private_subnet_ids
 
 }
+
+# module "rds" {
+#   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git"
+
+#   db_subnet_group_ids = var.db_subnet_group_ids
+  
+
+# }
 
 # module "ec2" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
