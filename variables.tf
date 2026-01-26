@@ -6,16 +6,16 @@ variable "applications" {
     s3_policy_json_tpl_path        = string
     arn                            = string
     postgress = object({
-        engine               = string
-        engine_version       = string
-        instance_class       = string
-        username             = string
-        password             = string
-        # parameter_group_name = string
-        skip_final_snapshot  = bool
-        db_name = string
-        identifier = string
-      })
+      engine         = string
+      engine_version = string
+      instance_class = string
+      username       = string
+      password       = string
+      # parameter_group_name = string
+      skip_final_snapshot = bool
+      db_names            = list(string)
+      # identifier          = string
+    })
   }))
 }
 
