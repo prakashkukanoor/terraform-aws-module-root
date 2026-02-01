@@ -6,12 +6,12 @@ variable "applications" {
     s3_policy_json_tpl_path        = string
     arn                            = string
     postgress = object({
-      engine         = string
-      engine_version = string
-      instance_class = string
-      username       = string
-      password       = string
-      db_family      = string
+      engine              = string
+      engine_version      = string
+      instance_class      = string
+      username            = string
+      password            = string
+      db_family           = string
       skip_final_snapshot = bool
       db_names            = list(string)
     })
@@ -28,6 +28,12 @@ variable "environment" {
 }
 variable "team" {
   type = string
+}
+variable "vpc_id" {
+  type = string
+}
+variable "db_subnets_ipv4_cidr" {
+  type = list(string)
 }
 
 variable "region" {

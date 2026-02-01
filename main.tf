@@ -35,11 +35,12 @@ module "eks" {
 module "rds" {
   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git"
 
-  environment = var.environment
-  team = var.team
-  applications = var.applications
-  db_subnet_ids = var.db_subnet_ids
-  
+  environment          = var.environment
+  team                 = var.team
+  applications         = var.applications
+  db_subnet_ids        = var.db_subnet_ids
+  vpc_id               = var.vpc_id
+  db_subnets_ipv4_cidr = var.db_subnets_ipv4_cidr
 
 }
 
