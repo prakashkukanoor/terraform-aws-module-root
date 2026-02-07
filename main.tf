@@ -29,18 +29,19 @@ module "eks" {
   team            = var.team
   cluster_name    = var.cluster_name
   private_subnets = var.application_private_subnet_ids
+  vpc_id          = var.vpc_id
 
 }
 
 module "rds" {
   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git"
 
-  environment          = var.environment
-  team                 = var.team
-  applications         = var.applications
-  db_subnet_ids        = var.db_subnet_ids
-  vpc_id               = var.vpc_id
-  db_subnets_ipv4_cidr = var.db_subnets_ipv4_cidr
+  environment                = var.environment
+  team                       = var.team
+  applications               = var.applications
+  db_subnet_ids              = var.db_subnet_ids
+  vpc_id                     = var.vpc_id
+  db_subnets_ipv4_cidr       = var.db_subnets_ipv4_cidr
   allow_eks_nodes_sg_traffic = module.eks.sg_eks_nodes_allow_nlb
 
   depends_on = [module.eks]
