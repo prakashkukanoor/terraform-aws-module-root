@@ -34,7 +34,7 @@ module "eks" {
 }
 
 module "rds" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git"
+  source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git?ref=v1.0.0"
 
   environment                = var.environment
   team                       = var.team
