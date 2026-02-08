@@ -13,7 +13,6 @@ variable "applications" {
       password            = string
       db_family           = string
       skip_final_snapshot = bool
-      db_names            = list(string)
     })
   }))
 }
