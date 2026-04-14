@@ -42,7 +42,7 @@ module "rds" {
   db_subnet_ids              = var.db_subnet_ids
   vpc_id                     = var.vpc_id
   db_subnets_ipv4_cidr       = var.db_subnets_ipv4_cidr
-  allow_eks_nodes_sg_traffic = module.eks.sg_eks_nodes_allow_nlb
+  # allow_eks_nodes_sg_traffic = module.eks.sg_eks_nodes_allow_nlb
 
   # depends_on = [module.eks]
 
