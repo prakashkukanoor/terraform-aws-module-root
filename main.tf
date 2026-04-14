@@ -33,20 +33,20 @@ module "dynamodb" {
 
 # }
 
-module "rds" {
-  source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git?ref=v1.0.0"
+# module "rds" {
+#   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git?ref=v1.0.0"
 
-  environment                = var.environment
-  team                       = var.team
-  applications               = var.applications
-  db_subnet_ids              = var.db_subnet_ids
-  vpc_id                     = var.vpc_id
-  db_subnets_ipv4_cidr       = var.db_subnets_ipv4_cidr
-  # allow_eks_nodes_sg_traffic = module.eks.sg_eks_nodes_allow_nlb
+#   environment                = var.environment
+#   team                       = var.team
+#   applications               = var.applications
+#   db_subnet_ids              = var.db_subnet_ids
+#   vpc_id                     = var.vpc_id
+#   db_subnets_ipv4_cidr       = var.db_subnets_ipv4_cidr
+#   allow_eks_nodes_sg_traffic = module.eks.sg_eks_nodes_allow_nlb
 
-  # depends_on = [module.eks]
+#   depends_on = [module.eks]
 
-}
+# }
 
 # module "ec2" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-module-ec2-instance.git"
