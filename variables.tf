@@ -50,9 +50,18 @@ variable "db_subnet_ids" {
 variable "eks_version" {
   type = string
 }
-# variable "filter_name" {
-#   type = string
-# }
-# variable "number_of_ec2" {
-#   type = number
-# }
+variable "instance_type" {
+  type = string
+}
+
+variable "eks_worker_node_desired_capacity" {
+  type = number
+}
+
+variable "eks_worker_node_min_size" {
+  type = number
+}
+
+variable "eks_worker_node_max_size" {
+  type = number
+}
