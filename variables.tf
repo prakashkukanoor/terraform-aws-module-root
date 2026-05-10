@@ -1,5 +1,6 @@
 variable "applications" {
   type = map(object({
+    services = list(string)
     buckets                        = list(string)
     dynamodb_tables                = list(string)
     dynamo_db_policy_json_tpl_path = string
@@ -28,9 +29,7 @@ variable "environment" {
 variable "team" {
   type = string
 }
-variable "vpc_id" {
-  type = string
-}
+
 variable "db_subnets_ipv4_cidr" {
   type = list(string)
 }
@@ -48,9 +47,9 @@ variable "db_subnet_ids" {
   default = []
 }
 
-# variable "instance_type" {
-#   type = string
-# }
+variable "eks_version" {
+  type = string
+}
 # variable "filter_name" {
 #   type = string
 # }

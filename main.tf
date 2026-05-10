@@ -22,16 +22,19 @@ module "dynamodb" {
 
 }
 
-# module "eks" {
-#   source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git"
+module "eks" {
+  source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git"
 
-#   environment     = var.environment
-#   team            = var.team
-#   cluster_name    = var.cluster_name
-#   private_subnets = var.application_private_subnet_ids
-#   vpc_id          = var.vpc_id
+  environment     = var.environment
+  team            = var.team
+  cluster_name    = var.cluster_name
+  eks_private_subnets = var.application_private_subnet_ids
+  applications = var.applications
+  eks_version = var.eks_version
 
-# }
+  depends_on = [module.s3, module.dynamodb]
+
+}
 
 # module "rds" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git?ref=v1.0.0"
