@@ -65,3 +65,13 @@ variable "eks_worker_node_min_size" {
 variable "eks_worker_node_max_size" {
   type = number
 }
+
+variable "eks_endpoint_private_access" {
+  type = bool
+  default = true
+}
+
+variable "eks_endpoint_public_access" {
+  type = bool
+  default = false
+}
