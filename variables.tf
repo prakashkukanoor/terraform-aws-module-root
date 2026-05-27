@@ -75,3 +75,7 @@ variable "eks_endpoint_public_access" {
   type = bool
   default = false
 }
+
+variable "console_user_arn" {
+  type = string
+}

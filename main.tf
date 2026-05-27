@@ -37,6 +37,7 @@ module "eks" {
   eks_worker_node_max_size = var.eks_worker_node_max_size
   endpoint_private_access = var.eks_endpoint_private_access
   endpoint_public_access = var.eks_endpoint_public_access
+  console_user_arn = var.console_user_arn
 
   depends_on = [module.s3, module.dynamodb]
 
