@@ -32,6 +32,7 @@ module "eks" {
   applications = var.applications
   eks_version = var.eks_version
   instance_type = var.instance_type
+  ami_type = var.ami_type
   eks_worker_node_desired_capacity = var.eks_worker_node_desired_capacity
   eks_worker_node_min_size = var.eks_worker_node_min_size
   eks_worker_node_max_size = var.eks_worker_node_max_size

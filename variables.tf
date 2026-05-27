@@ -79,3 +79,7 @@ variable "eks_endpoint_public_access" {
 variable "console_user_arn" {
   type = string
 }
+
+variable "ami_type" {
+  type = string
+}
