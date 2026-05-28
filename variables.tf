@@ -76,10 +76,13 @@ variable "eks_endpoint_public_access" {
   default = false
 }
 
-variable "console_user_arn" {
+variable "ami_type" {
   type = string
 }
 
-variable "ami_type" {
-  type = string
+variable "eks_iam_access" {
+  type = list(object({
+    policy_arn = string
+    principal_arn = string
+  }))
 }

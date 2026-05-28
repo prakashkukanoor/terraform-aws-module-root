@@ -32,13 +32,14 @@ module "eks" {
   applications = var.applications
   eks_version = var.eks_version
   instance_type = var.instance_type
+  eks_iam_access = var.eks_iam_access
   ami_type = var.ami_type
   eks_worker_node_desired_capacity = var.eks_worker_node_desired_capacity
   eks_worker_node_min_size = var.eks_worker_node_min_size
   eks_worker_node_max_size = var.eks_worker_node_max_size
   endpoint_private_access = var.eks_endpoint_private_access
   endpoint_public_access = var.eks_endpoint_public_access
-  console_user_arn = var.console_user_arn
+
 
   depends_on = [module.s3, module.dynamodb]
 
