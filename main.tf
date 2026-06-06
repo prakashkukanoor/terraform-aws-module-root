@@ -32,8 +32,8 @@ module "eks" {
   applications = var.applications
   eks_version = var.eks_version
   instance_type = var.instance_type
-  # eks_iam_access = var.eks_iam_access
-  console_user = var.console_user
+  eks_iam_user_access = var.eks_iam_user_access
+  aws_account_number = var.aws_account_number
   ami_type = var.ami_type
   eks_worker_node_desired_capacity = var.eks_worker_node_desired_capacity
   eks_worker_node_min_size = var.eks_worker_node_min_size
