@@ -86,3 +86,7 @@ variable "ami_type" {
 #     user_arn = string
 #   }))
 # }
+
+variable "console_user" {
+  type = string
+}
