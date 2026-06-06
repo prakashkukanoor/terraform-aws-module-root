@@ -80,9 +80,9 @@ variable "ami_type" {
   type = string
 }
 
-variable "eks_iam_access" {
-  type = list(object({
-    role = string
-    user_arn = string
-  }))
-}
+# variable "eks_iam_access" {
+#   type = list(object({
+#     role = string
+#     user_arn = string
+#   }))
+# }
