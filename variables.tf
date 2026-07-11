@@ -111,3 +111,11 @@ variable "aws_account_number" {
 # variable "target_type" {
 #   type = string
 # }
+
+# variable "vpc_id" {
+#   type = string
+# }
+
+# variable "application_public_subnet_ids" {
+#   type = list(string)
+# }

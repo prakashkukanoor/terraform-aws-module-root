@@ -28,9 +28,9 @@ output "eks_node_group_name" {
   value       = module.eks.node_group_name
 }
 
-output "aws_autoscaling_group_id" {
+output "aws_autoscaling_group_name" {
   description = "EKS node group Name"
-  value       = module.eks.aws_autoscaling_group_id
+  value       =  module.eks.aws_autoscaling_group_name
 }
 
 output "eks_configure_kubectl" {

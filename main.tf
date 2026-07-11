@@ -47,12 +47,12 @@ module "eks" {
 }
 
 # module "loadbalancer" {
-#   source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git//alb"
+#   source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git"
 #   environment                   = var.environment
 #   team                          = var.team
 #   cluster_name                  = module.eks.cluster_name
-#   subnets                       = module.networking.application_public_subnet_ids
-#   eks_worker_asg_id             = module.eks.cluster_security_group_id
+#   subnets                       = var.application_public_subnet_ids
+#   eks_worker_asg_name           = module.eks.aws_autoscaling_group_name
 #   load_balancer_type            = var.load_balancer_type
 #   load_balancing_algorithm_type = var.load_balancing_algorithm_type
 #   ingress_node_port             = var.ingress_node_port
