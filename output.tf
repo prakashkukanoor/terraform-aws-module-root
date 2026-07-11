@@ -33,6 +33,11 @@ output "aws_autoscaling_group_name" {
   value       =  module.eks.aws_autoscaling_group_name
 }
 
+# output "loadbalancer_dns_name" {
+#   description = "ARN for Load Balancer"
+#   value       = module.loadbalancer.loadbalancer_dns_name
+# }
+
 output "eks_configure_kubectl" {
   description = "Base64 encoded certificate data required to communicate with the cluster"
   value       = module.eks.configure_kubectl
