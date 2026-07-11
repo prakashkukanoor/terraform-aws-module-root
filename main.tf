@@ -25,26 +25,43 @@ module "dynamodb" {
 module "eks" {
   source = "git@github.com:prakashkukanoor/terraform-aws-eks-module.git?ref=feature/self-managed-eks"
 
-  environment     = var.environment
-  team            = var.team
-  cluster_name    = var.cluster_name
-  eks_private_subnets = var.application_private_subnet_ids
-  applications = var.applications
-  eks_version = var.eks_version
-  instance_type = var.instance_type
-  eks_iam_user_access = var.eks_iam_user_access
-  aws_account_number = var.aws_account_number
-  ami_type = var.ami_type
+  environment                      = var.environment
+  team                             = var.team
+  cluster_name                     = var.cluster_name
+  eks_private_subnets              = var.application_private_subnet_ids
+  applications                     = var.applications
+  eks_version                      = var.eks_version
+  instance_type                    = var.instance_type
+  eks_iam_user_access              = var.eks_iam_user_access
+  aws_account_number               = var.aws_account_number
+  ami_type                         = var.ami_type
   eks_worker_node_desired_capacity = var.eks_worker_node_desired_capacity
-  eks_worker_node_min_size = var.eks_worker_node_min_size
-  eks_worker_node_max_size = var.eks_worker_node_max_size
-  endpoint_private_access = var.eks_endpoint_private_access
-  endpoint_public_access = var.eks_endpoint_public_access
+  eks_worker_node_min_size         = var.eks_worker_node_min_size
+  eks_worker_node_max_size         = var.eks_worker_node_max_size
+  endpoint_private_access          = var.eks_endpoint_private_access
+  endpoint_public_access           = var.eks_endpoint_public_access
 
 
   depends_on = [module.s3, module.dynamodb]
 
 }
+
+# module "loadbalancer" {
+#   source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git//alb"
+#   environment                   = var.environment
+#   team                          = var.team
+#   cluster_name                  = module.eks.cluster_name
+#   subnets                       = module.networking.application_public_subnet_ids
+#   eks_worker_asg_id             = module.eks.cluster_security_group_id
+#   load_balancer_type            = var.load_balancer_type
+#   load_balancing_algorithm_type = var.load_balancing_algorithm_type
+#   ingress_node_port             = var.ingress_node_port
+#   is_lb_internal                = var.is_lb_internal
+#   vpc_id                        = var.vpc_id
+#   target_type                   = var.target_type
+
+#   depends_on = [module.eks]
+# }
 
 # module "rds" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git?ref=v1.0.0"

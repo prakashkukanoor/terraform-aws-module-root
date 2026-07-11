@@ -1,6 +1,6 @@
 variable "applications" {
   type = map(object({
-    services = list(string)
+    services                       = list(string)
     buckets                        = list(string)
     dynamodb_tables                = list(string)
     dynamo_db_policy_json_tpl_path = string
@@ -67,12 +67,12 @@ variable "eks_worker_node_max_size" {
 }
 
 variable "eks_endpoint_private_access" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "eks_endpoint_public_access" {
-  type = bool
+  type    = bool
   default = false
 }
 
@@ -91,3 +91,23 @@ variable "eks_iam_user_access" {
 variable "aws_account_number" {
   type = string
 }
+
+# variable "load_balancer_type" {
+#   type = string
+# }
+
+# variable "load_balancing_algorithm_type" {
+#   type = string
+# }
+
+# variable "ingress_node_port" {
+#   type = number
+# }
+
+# variable "is_lb_internal" {
+#   type = bool
+# }
+
+# variable "target_type" {
+#   type = string
+# }
