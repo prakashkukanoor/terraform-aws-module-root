@@ -59,6 +59,7 @@ module "eks" {
 #   is_lb_internal                = var.is_lb_internal
 #   vpc_id                        = var.vpc_id
 #   target_type                   = var.target_type
+#   eks_cluster_security_group_id = module.eks.cluster_security_group_id
 
 #   depends_on = [module.eks]
 # }
