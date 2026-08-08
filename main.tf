@@ -56,6 +56,7 @@ module "eks" {
 #   load_balancer_type            = var.load_balancer_type
 #   load_balancing_algorithm_type = var.load_balancing_algorithm_type
 #   ingress_node_port             = var.ingress_node_port
+#   envoy_healthcheck_port        = var.envoy_healthcheck_port
 #   is_lb_internal                = var.is_lb_internal
 #   vpc_id                        = var.vpc_id
 #   target_type                   = var.target_type
