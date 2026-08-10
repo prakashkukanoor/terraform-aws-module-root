@@ -104,10 +104,6 @@ variable "aws_account_number" {
 #   type = number
 # }
 
-# variable "envoy_healthcheck_port" {
-#   type = number
-# }
-
 # variable "is_lb_internal" {
 #   type = bool
 # }
