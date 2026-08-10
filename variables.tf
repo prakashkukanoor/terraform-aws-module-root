@@ -100,11 +100,11 @@ variable "aws_account_number" {
 #   type = string
 # }
 
-# variable "ingress_node_port" {
+# variable "lb_targetGroup_port" {
 #   type = number
 # }
 
-# variable "envoy_healthcheck_port" {
+# variable "lb_healthCheck_port" {
 #   type = number
 # }
 

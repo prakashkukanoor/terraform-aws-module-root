@@ -46,24 +46,24 @@ module "eks" {
 
 }
 
-module "loadbalancer" {
-  source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git"
-  environment                   = var.environment
-  team                          = var.team
-  cluster_name                  = module.eks.cluster_name
-  subnets                       = var.application_public_subnet_ids
-  eks_worker_asg_name           = module.eks.aws_autoscaling_group_name
-  load_balancer_type            = var.load_balancer_type
-  load_balancing_algorithm_type = var.load_balancing_algorithm_type
-  ingress_node_port             = var.ingress_node_port
-  envoy_healthcheck_port        = var.envoy_healthcheck_port
-  is_lb_internal                = var.is_lb_internal
-  vpc_id                        = var.vpc_id
-  target_type                   = var.target_type
-  eks_cluster_security_group_id = module.eks.cluster_security_group_id
+# module "loadbalancer" {
+#   source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git"
+#   environment                   = var.environment
+#   team                          = var.team
+#   cluster_name                  = module.eks.cluster_name
+#   subnets                       = var.application_public_subnet_ids
+#   eks_worker_asg_name           = module.eks.aws_autoscaling_group_name
+#   load_balancer_type            = var.load_balancer_type
+#   load_balancing_algorithm_type = var.load_balancing_algorithm_type
+#   lb_targetGroup_port           = var.lb_targetGroup_port
+#   lb_healthCheck_port           = var.lb_healthCheck_port
+#   is_lb_internal                = var.is_lb_internal
+#   vpc_id                        = var.vpc_id
+#   target_type                   = var.target_type
+#   eks_cluster_security_group_id = module.eks.cluster_security_group_id
 
-  depends_on = [module.eks]
-}
+#   depends_on = [module.eks]
+# }
 
 # module "rds" {
 #   source = "git@github.com:prakashkukanoor/terraform-aws-rds-module.git?ref=v1.0.0"
