@@ -92,35 +92,35 @@ variable "aws_account_number" {
   type = string
 }
 
-# variable "load_balancer_type" {
-#   type = string
-# }
+variable "load_balancer_type" {
+  type = string
+}
 
-# variable "load_balancing_algorithm_type" {
-#   type = string
-# }
+variable "load_balancing_algorithm_type" {
+  type = string
+}
 
-# variable "lb_targetGroup_port" {
-#   type = number
-# }
+variable "lb_targetGroup_port" {
+  type = number
+}
 
-# variable "lb_healthCheck_port" {
-#   type = number
-# }
+variable "lb_healthCheck_port" {
+  type = number
+}
 
 
-# variable "is_lb_internal" {
-#   type = bool
-# }
+variable "is_lb_internal" {
+  type = bool
+}
 
-# variable "target_type" {
-#   type = string
-# }
+variable "target_type" {
+  type = string
+}
 
-# variable "vpc_id" {
-#   type = string
-# }
+variable "vpc_id" {
+  type = string
+}
 
-# variable "application_public_subnet_ids" {
-#   type = list(string)
-# }
+variable "application_public_subnet_ids" {
+  type = list(string)
+}
