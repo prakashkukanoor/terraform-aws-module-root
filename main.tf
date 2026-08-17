@@ -47,7 +47,7 @@ module "eks" {
 }
 
 module "loadbalancer" {
-  source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git"
+  source                        = "git@github.com:prakashkukanoor/terraform-aws-load-balancer.git?ref=v1.0.0"
   environment                   = var.environment
   team                          = var.team
   cluster_name                  = module.eks.cluster_name
